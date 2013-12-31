@@ -7,9 +7,13 @@
   <% end %>
 </p>
 
+<% if @article.image.exists? %>
+	<p><%= image_tag @article.image.url %></p>
+<% end %>
+
 <p><%= @article.body %></p>
 
-<%= link_to "<< Back to Articles List", articles_path %> <br>
+<%= link_to "<< Back to Articles List", root_url %> <br>
 <%= link_to "edit", edit_article_path(@article) %>
 <%= link_to "Delete", article_path(@article), method: :delete, data: { confirm: 'Are you sure?' } %>
 

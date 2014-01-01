@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem "paperclip"
+gem 'sorcery'
 
 group :development, :test do
 	gem 'sqlite3'
